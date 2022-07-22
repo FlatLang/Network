@@ -49,7 +49,7 @@ class ServerSocket extends Socket {
 
     public close() => true {
         external {
-           #{server}.close()
+           #{server}.close();
         }
     }
 
