@@ -41,13 +41,13 @@ class ServerSocket extends Socket {
 
     public acceptClient() -> ConnectionSocket => null {
         if (!open) {
-            throw new ClosedStreamException("ServerSocket not started")
+            throw ClosedStreamException("ServerSocket not started")
         }
 
         SOCKET_ID_TYPE clientSocket = nova_serversocket_accept(serverSocket)
 
         if (clientSocket != 0) {
-            return new ConnectionSocket(clientSocket)
+            return ConnectionSocket(clientSocket)
         }
     }
 }

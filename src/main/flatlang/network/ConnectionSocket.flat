@@ -10,7 +10,7 @@ class ConnectionSocket extends Socket {
     visible InputStream  in
     visible OutputStream out
 
-    Queue<String> inputBuffer = new Queue()
+    Queue<String> inputBuffer = Queue()
 
     public validateConnection() => false {
         if (connected) {

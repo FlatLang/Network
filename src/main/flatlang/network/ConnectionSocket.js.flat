@@ -13,8 +13,8 @@ class ConnectionSocket extends Socket {
     visible OutputStream out
 
     public construct(private SOCKET_TYPE socket) {
-        //in = new NetworkInputStream(this)
-        //out = new NetworkOutputStream(this)
+        //in = NetworkInputStream(this)
+        //out = NetworkOutputStream(this)
 
         //connected = true
     }

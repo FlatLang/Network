@@ -1,13 +1,13 @@
 package "flatlang/network"
 
 class Socket {
-    HashMap<String, Array<action(String)>> eventListeners = new HashMap()
+    HashMap<String, Array<action(String)>> eventListeners = HashMap()
 
     public alertEventListeners(String eventType, String data) {
-        eventListeners.getOrDefault(eventType, { new Array() }).forEach({ _(data) })
+        eventListeners.getOrDefault(eventType, { Array() }).forEach({ _(data) })
     }
 
     public on(String eventType, action(String)) {
-        eventListeners.getOrDefault(eventType, { new Array() }).add(action)
+        eventListeners.getOrDefault(eventType, { Array() }).add(action)
     }
 }

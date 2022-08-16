@@ -7,7 +7,7 @@ class Socket {
         on(native Char[] eventType, action(String))
     }
 
-    JsSocket[] clients = new Array()
+    JsSocket[] clients = Array()
 
     public async on(String eventType) -> String {
         var resolveFunc = (String s) => {}

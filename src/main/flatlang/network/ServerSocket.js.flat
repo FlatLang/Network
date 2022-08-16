@@ -27,7 +27,7 @@ class ServerSocket extends Socket {
 
                     socket.on('data', (data) => {
                         #{dataChars} = data.toString();
-                        #{dataString = new String(dataChars)};
+                        #{dataString = String(dataChars)};
                         #{alertEventListeners("data", dataString)};
                     });
                 });
@@ -55,7 +55,7 @@ class ServerSocket extends Socket {
 
     public acceptClient() -> ConnectionSocket => null {
         if (!open) {
-            throw new ClosedStreamException("ServerSocket not started")
+            throw ClosedStreamException("ServerSocket not started")
         }
 
         var SOCKET_TYPE clientSocket
@@ -64,7 +64,7 @@ class ServerSocket extends Socket {
         }
 
         if (clientSocket) {
-            //return new ConnectionSocket(clientSocket)
+            //return ConnectionSocket(clientSocket)
         }
     }
 

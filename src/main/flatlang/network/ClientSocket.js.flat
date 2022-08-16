@@ -35,7 +35,7 @@ class ClientSocket extends Socket {
 
     public write(String value) => true {
         if (!socket) {
-            throw new Exception("Socket not connected")
+            throw Exception("Socket not connected")
         }
 
         external {

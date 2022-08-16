@@ -17,8 +17,8 @@ class ConnectionSocket extends Socket {
     visible OutputStream out
 
     public construct(private SOCKET_ID_TYPE socket) {
-        in = new NetworkInputStream(this)
-        out = new NetworkOutputStream(this)
+        in = NetworkInputStream(this)
+        out = NetworkOutputStream(this)
 
         connected = true
     }
@@ -39,7 +39,7 @@ class ConnectionSocket extends Socket {
                 return null
             }
 
-            return new String(data)
+            return String(data)
         }
 
         return inputBuffer.dequeue()

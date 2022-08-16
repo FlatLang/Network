@@ -20,7 +20,7 @@ class ClientSocket extends Socket {
             return false
         }
 
-        connection = new ConnectionSocket(socket)
+        connection = ConnectionSocket(socket)
 
         return true
     }
