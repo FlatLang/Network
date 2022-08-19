@@ -1,9 +1,9 @@
-package "flatlang/network"
+package flatlang/network
 
-import "flatlang/network/NativeClientSocket.h"
-import "flatlang/network/NativeSocket.h"
-import "flatlang/io/OutputStream"
-import "flatlang/io/InputStream"
+import flatlang/network/NativeClientSocket.h
+import flatlang/network/NativeSocket.h
+import flatlang/io/OutputStream
+import flatlang/io/InputStream
 
 class ClientSocket extends Socket {
     external type SOCKET_ID_TYPE
