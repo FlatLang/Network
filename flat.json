@@ -8,18 +8,20 @@
   "scripts": {
     "test": "node dist/test.js"
   },
-  "main": {
-    "source": "src",
-    "dependencies": {
-      "github:FlatLang/System": "master",
-      "github:FlatLang/IO": "master"
-    }
-  },
-  "test": {
-    "source": "src/**/*_Test*.flat",
-    "mainClass": "flatlang/network/Network_TestSuite",
-    "dependencies": {
-      "github:FlatLang/Nest": "master"
+  "sources": {
+    "main": {
+      "source": "src",
+      "dependencies": {
+        "github:FlatLang/System": "master",
+        "github:FlatLang/IO": "master"
+      }
+    },
+    "test": {
+      "source": "src/**/*_Test*.flat",
+      "mainClass": "flatlang/network/Network_TestSuite",
+      "dependencies": {
+        "github:FlatLang/Nest": "master"
+      }
     }
   }
 }
