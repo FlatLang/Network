@@ -5,31 +5,31 @@ import flatlang/io/OutputStream
 import flatlang/datastruct/list/Queue
 
 class ConnectionSocket extends Socket {
-    external type SOCKET_TYPE
+  external type SOCKET_TYPE
 
-    visible var Bool connected
+  visible var Bool connected
 
-    visible InputStream  in
-    visible OutputStream out
+  visible InputStream  in
+  visible OutputStream out
 
-    public construct(private SOCKET_TYPE socket) {
-        //in = NetworkInputStream(this)
-        //out = NetworkOutputStream(this)
+  public construct(private SOCKET_TYPE socket) {
+    //in = NetworkInputStream(this)
+    //out = NetworkOutputStream(this)
 
-        //connected = true
+    //connected = true
+  }
+
+  public close() {
+    connected = false
+
+    external {
+      #{socket}.close();
     }
+  }
 
-    public close() {
-        connected = false
+  readString(Bool checkBuffer) -> String {
+    return null
+  }
 
-        external {
-            #{socket}.close();
-        }
-    }
-
-    readString(Bool checkBuffer) -> String {
-        return null
-    }
-
-    public write(String data) => false
+  public write(String data) => false
 }

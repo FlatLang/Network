@@ -3,20 +3,20 @@ package flatlang/network
 import flatlang/datastruct/HashMap
 
 class Socket {
-    public static interface JsSocket {
-        on(native Char[] eventType, action(String))
+  public static interface JsSocket {
+    on(native Char[] eventType, action(String))
+  }
+
+  JsSocket[] clients = Array()
+
+  public async on(String eventType) -> String {
+    var resolveFunc = (String s) => {}
+
+    external {
+      return await new Promise(resolve => {
+        #{resolveFunc} = resolve;
+        #{on(eventType, {resolveFunc(_)})};
+      });
     }
-
-    JsSocket[] clients = Array()
-
-    public async on(String eventType) -> String {
-        var resolveFunc = (String s) => {}
-
-        external {
-            return await new Promise(resolve => {
-                #{resolveFunc} = resolve;
-                #{on(eventType, {resolveFunc(_)})};
-            });
-        }
-    }
+  }
 }
