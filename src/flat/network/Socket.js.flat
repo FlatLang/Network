@@ -1,6 +1,6 @@
-package flatlang/network
+package flat/network
 
-import flatlang/datastruct/HashMap
+import flat/datastruct/HashMap
 
 class Socket {
   public static interface JsSocket {

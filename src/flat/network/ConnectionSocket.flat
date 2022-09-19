@@ -1,8 +1,8 @@
-package flatlang/network
+package flat/network
 
-import flatlang/io/InputStream
-import flatlang/io/OutputStream
-import flatlang/datastruct/list/Queue
+import flat/io/InputStream
+import flat/io/OutputStream
+import flat/datastruct/list/Queue
 
 class ConnectionSocket extends Socket {
   visible var Bool connected

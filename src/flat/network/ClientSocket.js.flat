@@ -1,7 +1,7 @@
-package flatlang/network
+package flat/network
 
-import flatlang/io/OutputStream
-import flatlang/io/InputStream
+import flat/io/OutputStream
+import flat/io/InputStream
 
 class ClientSocket extends Socket {
   external type SOCKET_TYPE

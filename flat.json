@@ -18,7 +18,7 @@
     },
     "test": {
       "source": "src/**/*_Test*.flat",
-      "mainClass": "flatlang/network/Network_TestSuite",
+      "mainClass": "flat/network/Network_TestSuite",
       "dependencies": {
         "github:FlatLang/Nest": "master"
       }

@@ -1,4 +1,4 @@
-package flatlang/network
+package flat/network
 
 testable class {
   test `can create`() {

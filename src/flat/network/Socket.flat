@@ -1,4 +1,4 @@
-package flatlang/network
+package flat/network
 
 class Socket {
   HashMap<String, Array<action(String)>> eventListeners = HashMap()

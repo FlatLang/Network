@@ -1,7 +1,7 @@
-package flatlang/network
+package flat/network
 
-import flatlang/network/NativeSocket.h
-import flatlang/io/InputStream
+import flat/network/NativeSocket.h
+import flat/io/InputStream
 
 class NetworkInputStream implements InputStream {
   public construct(private ConnectionSocket socket) {}
