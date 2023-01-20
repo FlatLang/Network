@@ -31,7 +31,7 @@ class ConnectionSocket extends Socket {
 
   readString(Bool checkBuffer) -> String {
     if (!checkBuffer || inputBuffer.empty) {
-      native Char[] data = nova_socket_receive(socket)
+      native_array native Char[] data = nova_socket_receive(socket)
 
       if (data == 0) {
         connected = false

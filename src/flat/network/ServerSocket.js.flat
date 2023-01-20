@@ -14,7 +14,7 @@ class ServerSocket extends Socket {
 
   public async start(Int port) => true {
     var Socket.JsSocket client
-    var native Char[] dataChars
+    var native_array native Char[] dataChars
     var String dataString
 
     external {

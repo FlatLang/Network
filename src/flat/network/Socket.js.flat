@@ -4,7 +4,7 @@ import flat/datastruct/HashMap
 
 class Socket {
   public static interface JsSocket {
-    on(native Char[] eventType, action(String))
+    on(native_array native Char[] eventType, action(String))
   }
 
   JsSocket[] clients = Array()
