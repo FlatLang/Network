@@ -1,5 +1,7 @@
 package flat/network
 
+import flat/datastruct
+
 class Socket {
   HashMap<String, Array<action(String)>> eventListeners = HashMap()
 
