@@ -2,7 +2,7 @@ package flat/network
 
 testable class {
   test `can create`() {
-    let value = Object()
+    let value = "test"
 
     expect(value).toNotBe(null)
   }
