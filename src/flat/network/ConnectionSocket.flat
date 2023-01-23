@@ -25,4 +25,10 @@ class ConnectionSocket extends Socket {
   }
 
   public readString() => readString(true)
+
+  readString(Bool checkBuffer) -> String {
+    return null
+  }
+
+  public write(String data) => false
 }

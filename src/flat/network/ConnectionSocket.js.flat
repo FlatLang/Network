@@ -27,9 +27,5 @@ class ConnectionSocket extends Socket {
     }
   }
 
-  readString(Bool checkBuffer) -> String {
-    return null
-  }
-
   public write(String data) => false
 }
