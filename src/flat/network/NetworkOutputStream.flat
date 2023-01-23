@@ -1,6 +1,5 @@
 package flat/network
 
-import flat/network/NativeSocket.h
 import flat/io/OutputStream
 
 class implements OutputStream {
