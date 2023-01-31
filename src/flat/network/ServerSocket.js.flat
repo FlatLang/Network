@@ -1,8 +1,6 @@
 package flat/network
 
-import flat/io/InputStream
-import flat/io/OutputStream
-import flat/io/ClosedStreamException
+import flat/io
 
 class ServerSocket extends Socket {
   external type SERVER_TYPE
