@@ -6,32 +6,32 @@ import flat/io/OutputStream
 import flat/io/InputStream
 
 class ClientSocket extends Socket {
-  external type SOCKET_ID_TYPE
+    external type SOCKET_ID_TYPE
 
-  external SOCKET_ID_TYPE nova_clientsocket_connect(char ipAddress[], int port)
-  external int nova_socket_close(SOCKET_ID_TYPE serverSocket)
+    external SOCKET_ID_TYPE nova_clientsocket_connect(char ipAddress[], int port)
+    external int nova_socket_close(SOCKET_ID_TYPE serverSocket)
 
-  var SOCKET_ID_TYPE socket
+    var SOCKET_ID_TYPE socket
 
-  public connect() -> Bool {
-    socket = nova_clientsocket_connect(ip.chars.data, port)
+    public connect() -> Bool {
+        socket = nova_clientsocket_connect(ip.chars.data, port)
 
-    if (socket == 0) {
-      return false
+        if (socket == 0) {
+            return false
+        }
+
+        connection = ConnectionSocket(socket)
+
+        return true
     }
 
-    connection = ConnectionSocket(socket)
+    public close() -> Bool {
+        Int result = nova_socket_close(socket)
 
-    return true
-  }
+        if (result == 0) {
+            return false
+        }
 
-  public close() -> Bool {
-    Int result = nova_socket_close(socket)
-
-    if (result == 0) {
-      return false
+        return true
     }
-
-    return true
-  }
 }

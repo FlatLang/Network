@@ -7,7 +7,7 @@ import flat/io/OutputStream
 import flat/io/ClosedStreamException
 
 class ServerSocket extends Socket {
-  visible ConnectionSocket[] requests = Array()
+    visible ConnectionSocket[] requests = Array()
 
-  public construct() {}
+    public construct() {}
 }

@@ -5,30 +5,30 @@ import flat/io/OutputStream
 import flat/datastruct/list/Queue
 
 class ConnectionSocket extends Socket {
-  visible var Bool connected
+    visible var Bool connected
 
-  visible InputStream  in
-  visible OutputStream out
+    visible InputStream    in
+    visible OutputStream out
 
-  Queue<String> inputBuffer = Queue()
+    Queue<String> inputBuffer = Queue()
 
-  public validateConnection() => false {
-    if (connected) {
-      let message = readString(false)
+    public validateConnection() => false {
+        if (connected) {
+            let message = readString(false)
 
-      if (connected) {
-        inputBuffer.enqueue(message)
+            if (connected) {
+                inputBuffer.enqueue(message)
 
-        return true
-      }
+                return true
+            }
+        }
     }
-  }
 
-  public readString() => readString(true)
+    public readString() => readString(true)
 
-  readString(Bool checkBuffer) -> String {
-    return null
-  }
+    readString(Bool checkBuffer) -> String {
+        return null
+    }
 
-  public write(String data) => false
+    public write(String data) => false
 }
