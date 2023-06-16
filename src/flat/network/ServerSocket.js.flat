@@ -2,6 +2,8 @@ package flat/network
 
 import flat/io
 
+import static flat/node/import/Import
+
 class ServerSocket extends Socket {
     external type SERVER_TYPE
     external type SOCKET_TYPE
@@ -67,20 +69,10 @@ class ServerSocket extends Socket {
     }
 
     public static class NetGlobal {
-        external type NET
+        public static native Object net
 
-        private static var NET _net
-
-        visible static NET net {
-            get {
-                external {
-                    if (!#{_net}) {
-                        #{_net} = require('net');
-                    }
-                }
-
-                return _net
-            }
+        async static {
+            net = import("net")
         }
     }
 }
